@@ -1,6 +1,7 @@
 import "./Form.css";
 import InputText from "../InputText/InputText";
 import DropDown from "../DropDown/DropDown";
+import Option from "../Option/Option";
 
 const Form = (props) => {
     const sections = [
@@ -19,6 +20,11 @@ const Form = (props) => {
         "Xing Ling genérico",
     ];
 
+    const status = [
+        "Novo",
+        "Usado"
+    ];
+
     return (
         <section className="formulario">
             <form>
@@ -26,6 +32,7 @@ const Form = (props) => {
                 <DropDown label="Marca:" items={brands} />
                 <InputText label="Nome:" placeholder="Digite o nome do produto" />
                 <InputText label="Preço:" placeholder="Digite o preço do produto" />
+                <Option options={status} />
             </form>
         </section>
      );
