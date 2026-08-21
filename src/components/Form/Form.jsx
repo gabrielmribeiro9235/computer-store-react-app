@@ -2,6 +2,7 @@ import "./Form.css";
 import InputText from "../InputText/InputText";
 import DropDown from "../DropDown/DropDown";
 import Option from "../Option/Option";
+import Button from "../Button/Button";
 
 const Form = (props) => {
     const sections = [
@@ -33,6 +34,7 @@ const Form = (props) => {
                 <InputText label="Nome:" placeholder="Digite o nome do produto" />
                 <InputText label="Preço:" placeholder="Digite o preço do produto" />
                 <Option options={status} />
+                <Button>Inserir Produto</Button>
             </form>
         </section>
      );
