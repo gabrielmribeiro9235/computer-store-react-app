@@ -1,8 +1,8 @@
-function App() {
-  const [count, setCount] = useState(0)
+import Header from "./components/Header/Header"
 
+function App() {
   return (
-    <h1>Ínicio</h1>
+    <Header>Dados do produto</Header>
   )
 }
 
