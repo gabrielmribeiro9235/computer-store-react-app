@@ -3,8 +3,15 @@ import InputText from "../InputText/InputText";
 import DropDown from "../DropDown/DropDown";
 import Option from "../Option/Option";
 import Button from "../Button/Button";
+import { useState } from "react";
 
 const Form = (props) => {
+    const [section, setSection] = useState("");
+    const [brand, setBrand] = useState("");
+    const [name, setName] = useState("");
+    const [price, setPrice] = useState("");
+    const [selectedStatus, setSelectedStatus] = useState("");
+
     const sections = [
         "Computadores",
         "Acessórios",
@@ -26,14 +33,18 @@ const Form = (props) => {
         "Usado"
     ];
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    }
+
     return (
         <section className="formulario">
-            <form>
-                <DropDown label="Seção:" items={sections} />
-                <DropDown label="Marca:" items={brands} />
-                <InputText label="Nome:" placeholder="Digite o nome do produto" />
-                <InputText label="Preço:" placeholder="Digite o preço do produto" />
-                <Option options={status} />
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <DropDown label="Seção:" items={sections} value={section} setValue={setSection} />
+                <DropDown label="Marca:" items={brands} value={brand} setValue={setBrand} />
+                <InputText label="Nome:" placeholder="Digite o nome do produto" value={name} setValue={setName} />
+                <InputText label="Preço:" placeholder="Digite o preço do produto" value={price} setValue={setPrice} />
+                <Option options={status} selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus} />
                 <Button>Inserir Produto</Button>
             </form>
         </section>
