@@ -1,15 +1,15 @@
 import "./DropDown.css";
 
-const DropDown = (props) => {
+const DropDown = ({ label, value, items, setValue }) => {
     const handleSelection = (event) => {
-        props.setValue(event.target.value);
+        setValue(event.target.value);
     }
 
     return (
         <div className="drop-down">
-            <label>{props.label}</label>
-            <select value={props.value} onChange={(event) => handleSelection(event)}>
-                {props.items.map(item => <option key={item}>{item}</option>)}
+            <label>{label}</label>
+            <select value={value} onChange={(event) => handleSelection(event)}>
+                {items.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
     );
