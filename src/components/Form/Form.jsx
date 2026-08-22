@@ -46,6 +46,12 @@ const Form = ({ products, setProducts }) => {
             };
 
             setProducts([...products, newProduct]);
+
+            setSection(sections[0]);
+            setBrand(brands[0]);
+            setName("");
+            setPrice(0);
+            setSelectedStatus("");
         } else {
             alert(
                 `Todos os campos devem ser preenchidos\n\nCampo(s) vazio(s):\n${!section ? "[Seção] " : ""}${!brand ? "[Marca] " : ""}${!name ? "[Nome] " : ""}${!price ? "[Preço] " : ""}${!selectedStatus ? "[Novo ou Usado] " : ""}`
