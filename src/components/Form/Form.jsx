@@ -5,15 +5,7 @@ import Option from "../Option/Option";
 import Button from "../Button/Button";
 import { useState } from "react";
 
-const Form = ({ products, setProducts }) => {
-    const sections = [
-        "Computadores",
-        "Acessórios",
-        "Impressoras",
-        "Games",
-        "Gadgets"
-    ];
-
+const Form = ({ products, setProducts, sections }) => {
     const brands = [
         "HP",
         "Dell",
