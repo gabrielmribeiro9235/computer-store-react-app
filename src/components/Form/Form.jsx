@@ -5,7 +5,7 @@ import Option from "../Option/Option";
 import Button from "../Button/Button";
 import { useState } from "react";
 
-const Form = (props) => {
+const Form = ({ products, setProducts }) => {
     const sections = [
         "Computadores",
         "Acessórios",
@@ -35,6 +35,22 @@ const Form = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (section && brand && name && price && selectedStatus) {
+            const newProduct = {
+                section,
+                brand,
+                name,
+                price,
+                status: selectedStatus,
+            };
+
+            setProducts([...products, newProduct]);
+        } else {
+            alert(
+                `Todos os campos devem ser preenchidos\n\nCampo(s) vazio(s):\n${!section ? "[Seção] " : ""}${!brand ? "[Marca] " : ""}${!name ? "[Nome] " : ""}${!price ? "[Preço] " : ""}${!selectedStatus ? "[Novo ou Usado] " : ""}`
+            );
+        }
     }
 
     return (
