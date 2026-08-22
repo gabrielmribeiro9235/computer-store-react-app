@@ -23,8 +23,8 @@ const InputText = ({ label, placeholder, value, setValue, isCurrency }) => {
 
     return ( 
         <div className="input-text">
-            <label>{label}</label>
-            <input placeholder={placeholder} value={formattedValue} type="text" onChange={handleOnChange} />
+            <label htmlFor={label}>{label}</label>
+            <input id={label} placeholder={placeholder} value={formattedValue} type="text" onChange={handleOnChange} />
         </div>
      );
 }

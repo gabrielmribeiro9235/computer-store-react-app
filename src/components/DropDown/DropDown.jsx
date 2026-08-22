@@ -7,8 +7,8 @@ const DropDown = ({ label, value, items, setValue }) => {
 
     return (
         <div className="drop-down">
-            <label>{label}</label>
-            <select value={value} onChange={handleSelection}>
+            <label htmlFor={label}>{label}</label>
+            <select id={label} value={value} onChange={handleSelection}>
                 {items.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
