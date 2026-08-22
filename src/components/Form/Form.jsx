@@ -6,12 +6,6 @@ import Button from "../Button/Button";
 import { useState } from "react";
 
 const Form = (props) => {
-    const [section, setSection] = useState("");
-    const [brand, setBrand] = useState("");
-    const [name, setName] = useState("");
-    const [price, setPrice] = useState("");
-    const [selectedStatus, setSelectedStatus] = useState("");
-
     const sections = [
         "Computadores",
         "Acessórios",
@@ -32,6 +26,12 @@ const Form = (props) => {
         "Novo",
         "Usado"
     ];
+
+    const [section, setSection] = useState(sections[0]);
+    const [brand, setBrand] = useState(brands[0]);
+    const [name, setName] = useState("");
+    const [price, setPrice] = useState("");
+    const [selectedStatus, setSelectedStatus] = useState("");
 
     const handleSubmit = (event) => {
         event.preventDefault();
