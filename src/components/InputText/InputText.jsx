@@ -24,7 +24,7 @@ const InputText = ({ label, placeholder, value, setValue, isCurrency }) => {
     return ( 
         <div className="input-text">
             <label>{label}</label>
-            <input placeholder={placeholder} value={formattedValue} type="text" onChange={(event) => handleOnChange(event)} />
+            <input placeholder={placeholder} value={formattedValue} type="text" onChange={handleOnChange} />
         </div>
      );
 }

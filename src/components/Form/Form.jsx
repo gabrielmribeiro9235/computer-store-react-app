@@ -61,7 +61,7 @@ const Form = ({ products, setProducts }) => {
 
     return (
         <section className="formulario">
-            <form onSubmit={(event) => handleSubmit(event)}>
+            <form onSubmit={handleSubmit}>
                 <DropDown label="Seção:" items={sections} value={section} setValue={setSection} />
                 <DropDown label="Marca:" items={brands} value={brand} setValue={setBrand} />
                 <InputText label="Nome:" placeholder="Digite o nome do produto" value={name} setValue={setName} isCurrency={false} />
