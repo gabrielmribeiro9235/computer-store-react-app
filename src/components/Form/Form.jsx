@@ -44,7 +44,11 @@ const Form = ({ products, setProducts, sections }) => {
                 status: selectedStatus,
             };
 
-            setProducts([...products, newProduct]);
+            const newArray = products.slice();
+
+            newArray.push(newProduct);
+
+            setProducts(newArray);
 
             setSection(sections[0]);
             setBrand(brands[0]);
