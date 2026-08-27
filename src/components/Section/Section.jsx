@@ -9,7 +9,7 @@ const Section = ({ name, primaryColor, secondaryColor, products }) => {
     products.length > 0 ? (
       <section className="section" style={backgroundColor}>
         <h3 style={underlineColor}>{name}</h3>
-        <div className="produtos">
+        <div className="products">
           {products.map(product => (
             <Card
               key={`${product.name}-${product.brand}`}
