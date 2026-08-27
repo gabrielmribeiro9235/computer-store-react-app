@@ -15,7 +15,7 @@ const Section = ({ name, primaryColor, secondaryColor, products }) => {
               key={`${product.name}-${product.brand}`}
               name={product.name}
               price={product.price}
-              image={product.image}
+              brand={product.brand}
               status={product.status}
             />
           ))}
