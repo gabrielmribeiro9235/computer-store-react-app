@@ -22,7 +22,7 @@ const Card = ({ name, price, brand, status }) => {
       <div className="footer">
         <h4>{name}</h4>
         <h5>R$ {price}</h5>
-        <h5>{status}</h5>
+        <h6>{status}</h6>
       </div>
     </div>
   );
