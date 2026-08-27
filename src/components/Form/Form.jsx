@@ -34,6 +34,13 @@ const Form = ({ products, setProducts, sections }) => {
                 brand,
                 name,
                 price,
+                image: {
+                    HP: "hpLogo.png",
+                    Dell: "dellLogo.png",
+                    Positivo: "positivoLogo.png",
+                    Asus: "asusLogo.png",
+                    "Xing Ling genérico": "xinglingLogo.jpg",
+                }[brand],
                 status: selectedStatus,
             };
 
