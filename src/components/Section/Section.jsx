@@ -2,8 +2,8 @@ import './Section.css';
 import Card from "../Card/Card";
 
 const Section = ({ name, primaryColor, secondaryColor, products }) => {
-  const backgroundColor = { backgroundColor: secondaryColor };
-  const underlineColor = { borderColor: primaryColor };
+  const backgroundColor = { backgroundColor: primaryColor };
+  const underlineColor = { borderBottomColor: secondaryColor };
 
   return (
     products.length > 0 ? (
