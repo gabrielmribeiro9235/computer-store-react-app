@@ -49,6 +49,12 @@ const Form = ({ products, setProducts, sections }) => {
             setName("");
             setPrice(0);
             setSelectedStatus("");
+
+            setTimeout(() => {
+                document.querySelector(`#${newProduct.section}`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            }, 50);
         } else {
             alert(
                 `Todos os campos devem ser preenchidos\n\nCampo(s) vazio(s):\n${!section ? "[Seção] " : ""}${!brand ? "[Marca] " : ""}${!name ? "[Nome] " : ""}${!price ? "[Preço] " : ""}${!selectedStatus ? "[Novo ou Usado] " : ""}`

@@ -7,7 +7,7 @@ const Section = ({ name, primaryColor, secondaryColor, products }) => {
 
   return (
     products.length > 0 ? (
-      <section className="section" style={backgroundColor}>
+      <section id={name} className="section" style={backgroundColor}>
         <h3 style={underlineColor}>{name}</h3>
         <div className="products">
           {products.map(product => (
