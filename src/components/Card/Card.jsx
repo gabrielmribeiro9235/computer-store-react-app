@@ -14,6 +14,13 @@ const Card = ({ name, price, brand, status }) => {
     "Xing Ling genérico": xinglingLogo,
   };
 
+  const formatter = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  });
+
+  const formattedPrice = formatter.format(price);
+
   return (
     <div className="card">
       <div className="header">
@@ -21,7 +28,7 @@ const Card = ({ name, price, brand, status }) => {
       </div>
       <div className="footer">
         <h4>{name}</h4>
-        <h5>R$ {price}</h5>
+        <h5>{formattedPrice}</h5>
         <h6>{status}</h6>
       </div>
     </div>
