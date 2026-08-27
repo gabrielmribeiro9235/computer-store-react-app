@@ -12,7 +12,7 @@ const Section = ({ name, primaryColor, secondaryColor, products }) => {
         <div className="products">
           {products.map(product => (
             <Card
-              key={`${product.name}-${product.brand}`}
+              key={product.id}
               name={product.name}
               price={product.price}
               brand={product.brand}

@@ -30,6 +30,7 @@ const Form = ({ products, setProducts, sections }) => {
 
         if (section && brand && name && price && selectedStatus) {
             const newProduct = {
+                id: products.length + 1,
                 section,
                 brand,
                 name,
